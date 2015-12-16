@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock title %} </title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    {% block extra_head %}{% endblock extra_head %}                <!-- ce bomo slucajno meli dodatne css za posamezne strani -->
+</head>
+<body>
+    {% block nav %}
+    <!-- nasa navigacija-->
+    <div class="header">
+        <div id="logo">
+        <img id="logotip" src="/assets/img/logo-ninja.png">
+        </div>
+        <div id="nav">
+        <ul>
+            <li><a href="/chat">chat</a></li>
+            <li><a href="/login">login</a></li>
+            <li><a href="/registracija">registracija</a></li>
+            <li><a href="/">hello</a></li>
+        </ul>
+        </div>
+        </div>
+    <!-- konec navigacija-->
+    {% endblock nav %}
+    <div id="content">
+    {% block content %} {% endblock content %}
+    </div>
+
+    {% block footer %}
+    <div id="footer">
+        <p id="www">www.smartninja.com</p>
+    </div>
+    {% endblock footer %}
+
+</body>
+</html>
+

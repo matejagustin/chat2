@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}  {% endblock title %}
+
+{% block content %}
+<body>
+{% if logiran %}
+<div class="chat">
+    <div class="new_chat">
+         <br>
+        <form method="post" action="chat">
+            {{ user }}
+            <textarea class="forma" placeholder="enter your message:" name="new_chat"></textarea>
+            <br>
+            <button type="submit" class="chat_button">SEND</button>
+        </form>
+        <br>
+    </div>
+
+    <div class="chats">
+        <p class="text_small">{{ a }} wrote:</p>
+
+        {{ b }}
+    </div>
+</div>
+{% else %}
+Če želiš uporabljati GuestBook se prosim <a href="/login">logiraj tu</a>. Če uporabniškega računa še nimaš, se <a href="/registracija">registriraj</a>.
+{% endif %}
+</body>
+{% endblock content %}
+

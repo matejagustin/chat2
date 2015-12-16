@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}  {% endblock title %}
+
+{% block content %}
+<body>
+{% if user_exists %}
+    <div class="registracija">
+        <p><h2>OOops..</h2>A user with this email allready exists.</p>
+        <p>Please <a href="/login">LOGIN</a>.</p>
+    </div>
+{% else %}
+<div class="registracija">
+    <div class="radio_chat">
+        <img src="/assets/img/register2.png" width="320px"/>
+        <br>
+        <form action="/registracija" method="post">
+            <input class="forma forma1" placeholder="Enter your name" name="ime"> <br>
+            <input class="forma forma1" placeholder="Choose a lastname" name="priimek"> <br>
+            <input class="forma forma1" placeholder="Enter your email" name="email" type="email"> <br>
+            <input class="forma forma1" placeholder="Choose a password" name="geslo" type="password"> <br>
+            <input class="forma forma1" placeholder="Repeat password" name="ponovno_geslo" type="password"> <br>
+            <br>
+            <button type="submit" class="submit"> >> submit << </button>
+        </form>
+    </div>
+</div>
+{% endif %}
+</body>
+
+
+{% endblock content %}
+

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}  {% endblock title %}
+
+{% block content %}
+<body>
+
+<div class="chat">
+    {{ test_key }}
+    <h2>to je test, če uporabnik obstaja</h2>
+{% if have_error %}
+    <p>bla</p>
+{% else %}
+    <p>bla bla </p>
+{% endif %}
+</div>
+
+</body>
+{% endblock content %}
+
+
